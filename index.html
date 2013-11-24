@@ -70,6 +70,14 @@ try {
     navigator.geolocation.getCurrentPosition(positionHandler, errorHandler);
 } catch (e) { alert (e);} 
 
+function newDoc()
+  {
+  FB.logout(function(response) {
+        // Person is now logged out
+    });
+  window.location.assign("http://test.geohangout.biz/facebooklogin.html")
+  }
+
 </script>
 <style type="text/css">
 #mapContainer {
@@ -79,9 +87,15 @@ try {
     position: absolute;
     top : 0px; left : 0px;
 }
+#logout{
+	position: relative;
+	top : 400px; left : 0px;
+	
+}
 </style>
 </head>
 <body>
     <div id="mapContainer"></div>
+    <input id="logout" type="button" value="Log out" onclick="newDoc()">
 </body>
 </html>

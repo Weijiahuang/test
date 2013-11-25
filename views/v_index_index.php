@@ -87,7 +87,7 @@ Geohangout
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log('Good to see you, ' + response.name + '.');
+      console.log('Good to see you, ' + response.email + '.');
       window.location.assign("http://p1.geohangout.biz");
     });
   }
